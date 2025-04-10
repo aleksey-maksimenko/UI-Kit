@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документация | UI Kit</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="documentation-container">
+    <!-- блок с описанием и демонстрацией кнопок -->
+    <div class="component-container">
+      <h2>1. Кнопки</h2>
+      <p>Используются для активации действий на странице. Доступны следующие вариации:</p>
+      <ul>
+        <li>Размеры: маленькая, средняя, большая</li>
+        <li>Классы: .button--primary, .button--secondary, .button--disabled</li>
+      </ul>
+      <div class="demo-container">
+        <div class="demo-item">
+          <h3>Обычная кнопка</h3>
+          <button class="button button--primary">Кнопка</button>
+        </div>
+        <div class="demo-item">
+          <h3>Кнопка с фокусом</h3>
+          <button class="button button--primary" tabindex="0">Кнопка</button>
+        </div>
+        <div class="demo-item">
+          <h3>Неактивная кнопка</h3>
+          <button class="button button--disabled" disabled>Кнопка</button>
+        </div>
+      </div>
+    </div>
+    <!-- блок с описанием и демонстрацией полей ввода -->
+    <div class="component-container">
+      <h2>2. Поля ввода</h2>
+      <p>Используются для ввода текста. Доступны следующие состояния:</p>
+      <ul>
+        <li>Состояние нормальное</li>
+        <li>Состояние фокуса</li>
+        <li>Состояние ошибки</li>
+      </ul>
+      <div class="demo-container">
+        <div class="demo-item">
+          <h3>Обычное поле ввода</h3>
+          <input class="input" type="text" placeholder="Введите текст" />
+        </div>
+        <div class="demo-item">
+          <h3>Поле ввода с фокусом</h3>
+          <input class="input" type="text" placeholder="Кликните сюда" autofocus />
+        </div>
+        <div class="demo-item">
+          <h3>Поле ввода с ошибкой</h3>
+          <input class="input input--error" type="text" placeholder="Ошибка ввода" />
+          <div class="input__error-message">Введите корректное значение</div>
+        </div>
+      </div>
+    </div>
+    <!-- блок с описанием и демонстрацией карточек -->
+    <div class="component-container">
+      <h2>3. Карточки</h2>
+      <p>Карточки используются для отображения информации. Доступны следующие вариации:</p>
+      <ul>
+        <li>Размеры: маленькая, средняя, большая</li>
+        <li>С изображением или без изображения</li>
+      </ul>
+      <div class="demo-container">
+        <div class="demo-item">
+          <h3>Маленькая карточка с изображением</h3>
+          <div class="card card--small">
+            <img class="card__image" src="img/sample.jpg" alt="Sample image">
+            <h3 class="card__title">Карточка 1</h3>
+            <p class="card__text">Текст карточки с изображением.</p>
+          </div>
+        </div>
+        <div class="demo-item">
+          <h3>Средняя карточка без изображения</h3>
+          <div class="card card--medium card--no-image">
+            <h3 class="card__title">Карточка 2</h3>
+            <p class="card__text">Текст карточки без изображения.</p>
+          </div>
+        </div>
+        <div class="demo-item">
+          <h3>Большая карточка с изображением</h3>
+          <div class="card card--large">
+            <img class="card__image" src="img/sample.jpg" alt="Sample image">
+            <h3 class="card__title">Карточка 3</h3>
+            <p class="card__text">Текст большой карточки с изображением.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="documentation-container">
+    <!-- Секция Flexbox -->
+    <div class="component-container">
+      <h2>Flexbox</h2>
+      <p>Используется для создания гибких, адаптивных макетов, которые можно легко выравнивать и распределять элементы.</p>
+      <ul>
+        <li>Гибкость в распределении пространства</li>
+        <li>Выравнивание элементов по вертикали и горизонтали</li>
+        <li>Поддержка адаптивных интерфейсов</li>
+      </ul>
+      <h3>Пример</h3>
+      <div class="demo-container">
+        <div class="demo-item">
+          <h3>Flexbox</h3>
+          <div class="flexbox-container">
+            <div class="flexbox-item">Элемент 1</div>
+            <div class="flexbox-item">Элемент 2</div>
+            <div class="flexbox-item">Элемент 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="component-container">
+      <h2>Grid</h2>
+      <p>Используется для создания сеточных макетов. Grid позволяет точно задавать размеры и размещение элементов на странице.</p>
+      <ul>
+        <li>Гибкость при создании сеток</li>
+        <li>Определение четких областей для элементов</li>
+        <li>Поддержка адаптивных макетов</li>
+      </ul>
+      <h3>Пример</h3>
+      <div class="demo-container">
+        <div class="demo-item">
+          <h3>Grid</h3>
+          <div class="grid-container">
+            <div class="card card--small">
+              <img src="img/sample.jpg" alt="Sample Image" class="card__image">
+              <div class="card__title">Карточка 1</div>
+              <div class="card__text">Описание карточки 1</div>
+            </div>
+            <div class="card card--medium">
+              <img src="img/sample.jpg" alt="Sample Image" class="card__image">
+              <div class="card__title">Карточка 2</div>
+              <div class="card__text">Описание карточки 2</div>
+            </div>
+            <div class="card card--large">
+              <img src="img/sample.jpg" alt="Sample Image" class="card__image">
+              <div class="card__title">Карточка 3</div>
+              <div class="card__text">Описание карточки 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
