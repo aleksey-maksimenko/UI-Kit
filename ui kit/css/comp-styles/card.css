@@ -1,0 +1,86 @@
+/* базовый стиль карточки */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding-medium);
+  font-family: var(--font-family);
+  max-width: 400px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+/* заголовок карточки */
+.card__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* текст карточки */
+.card__text {
+  font-size: 14px;
+  color: #333;
+}
+/* изображение */
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  margin-bottom: 12px;
+}
+/* карточка без изображения */
+.card--no-image .card__image {
+  display: none;
+}
+/* размеры карточки */
+.card--small {
+  max-width: 250px;
+  padding: var(--card-padding-small);
+  font-size: 14px;
+}
+.card--medium {
+  max-width: 350px;
+  padding: var(--card-padding-medium);
+  font-size: 16px;
+}
+.card--large {
+  max-width: 500px;
+  padding: var(--card-padding-large);
+  font-size: 18px;
+}
+
+/* адаптивность для маленьких экранов (до 600px) */
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* карточка занимает всю ширину */
+    padding: var(--card-padding-small);
+    font-size: 14px; /* уменьшаем шрифт */
+  }
+  .card--small {
+    max-width: 100%; /* карточка маленького размера будет занимать 100% ширины */
+  }
+  .card--medium {
+    max-width: 100%; /* карточка среднего размера тоже растягивается */
+  }
+  .card--large {
+    max-width: 100%; /* карточка большого размера тоже растягивается */
+  }
+}
+
+/* для экранв 600px до 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .card {
+    width: 50%; /* на экранах среднего размера карточки занимают половину ширины */
+    padding: var(--card-padding-medium);
+    font-size: 16px; /* размер шрифта увеличивается */
+  }
+  .card--small {
+    max-width: 100%;
+  }
+  .card--medium {
+    max-width: 100%;
+  }
+  .card--large {
+    max-width: 100%;
+  }
+}

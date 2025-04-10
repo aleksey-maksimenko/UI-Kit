@@ -1,0 +1,46 @@
+@import url("variables.css");
+@import url("base/reset.css");
+@import url("comp-styles/button.css");
+@import url("comp-styles/input.css");
+@import url("comp-styles/card.css");
+@import url("comp-styles/nav.css");
+@import url("comp-styles/flexbox.css");
+@import url("comp-styles/grid.css");
+
+.documentation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* контейнер для каждого компонента */
+.component-container {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.component-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.component-container ul {
+  margin-bottom: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+.component-container li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.demo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.demo-item {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}

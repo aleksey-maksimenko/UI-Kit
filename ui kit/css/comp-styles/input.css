@@ -1,0 +1,106 @@
+/* общий стиль для текстового поля */
+.input {
+  width: 100%;
+  max-width: 300px;
+  padding: var(--padding-input);
+  font-size: var(--font-size-input);
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius);
+  background-color: var(--color-input-background);
+  color: var(--color-input-text);
+  outline: none;
+  transition: border-color var(--transition), box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+/* состояние фокуса */
+.input:focus {
+  border-color: var(--color-input-border-focus);
+  box-shadow: 0 0 5px var(--color-input-border-focus);
+}
+/* состояние ошибки */
+.input--error {
+  border-color: var(--color-input-border-error);
+}
+/* иконка внутри поля ввода */
+.input__icon {
+  margin-right: 8px;
+  color: var(--color-input-placeholder);
+}
+/* для текста ошибки */
+.input__error-message {
+  color: var(--color-error-message);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius);
+  background-color: var(--color-input-background);
+  padding: var(--padding-input);
+  max-width: 400px;
+  transition: border-color var(--transition), box-shadow 0.2s ease;
+}
+.input-wrapper:focus-within {
+  border-color: var(--color-input-border-focus);
+  box-shadow: 0 0 5px var(--color-input-border-focus);
+}
+.input__icon {
+  margin-right: 8px;
+  font-size: 16px;
+  color: var(--color-input-placeholder);
+}
+
+/* поле внутри обертки — убираем фон и рамки */
+.input--with-icon {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--font-size-input);
+  font-family: var(--font-family);
+  color: var(--color-input-text);
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .input {
+    padding: var(--padding-small); /* уменьшаем отступы */
+    font-size: 14px; /* уменьшаем шрифт */
+  }
+  .input-wrapper {
+    display: block; /* иконка будет располагаться сверху или снизу от поля */
+    margin-bottom: 10px;
+  }
+  .input__icon {
+    margin-right: 0;
+    margin-bottom: 8px; /* иконка будет располагаться сверху */
+  }
+  .input__error-message {
+    font-size: 11px; /* уменьшаем размер шрифта для ошибки */
+    margin-top: 3px;
+  }
+}
+
+/* адаптивность для устройств с экранами (600px до 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .input {
+    padding: var(--padding-medium); 
+    font-size: 15px; /* чуть увеличиваем шрифт */
+  }
+  .input-wrapper {
+    display: flex; /* иконка будет располагаться в поле */
+    align-items: center;
+  }
+  .input__icon {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  .input__error-message {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}

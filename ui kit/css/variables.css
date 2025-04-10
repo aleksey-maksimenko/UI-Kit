@@ -1,0 +1,58 @@
+:root {
+  /* цвета, размеры, отступы */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-primary-active: #00418c;
+
+  --color-secondary: #e0e0e0;
+  --color-secondary-hover: #c8c8c8;
+  --color-secondary-active: #b0b0b0;
+
+  --color-disabled: #cccccc;
+  --color-disabled-text: #666666;
+
+  --radius: 4px;
+  --transition: 0.3s;
+
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
+  --padding-small: 6px 12px;
+  --padding-medium: 10px 20px;
+  --padding-large: 14px 28px;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* для инпутов */
+  --color-input-border: #ccc;
+  --color-input-border-focus: #007bff;
+  --color-input-border-error: #ff4d4d;
+  --color-input-background: #e6f0ff
+  --color-input-text: #333;
+  --color-input-placeholder: #888;
+  --color-error-message: #ff4d4d;
+
+  --padding-input: 8px 12px;
+  --font-size-input: 16px;
+  
+  --card-bg: #f4f7fb; /* фоновый цвет карточки — светло-голубой, чтобы выделялась на белом фоне */
+  --card-border: #ccc; /* цвет границы карточки — светло-серый */
+  --card-radius: 8px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --card-padding-small: 10px;
+  --card-padding-medium: 16px;
+  --card-padding-large: 24px;
+  
+  /* цвета для меню */
+  --color-nav-bg: #f4f7fb; /* светлый голубоватый фон */
+  --color-nav-item: #333; /* темный текст для элементов */
+  --color-nav-item-hover: #007bff; 
+  --color-nav-item-active: #0056b3;
+  --color-nav-border: #ccc; /* светлая граница для разделителей */
+  --color-nav-icon: #007bff; /* иконка гамбургера */
+
+  --nav-padding: 10px 20px; 
+  --nav-font-size: 16px; 
+  --nav-font-size-small: 14px; /* размер шрифта для мобильных */
+}

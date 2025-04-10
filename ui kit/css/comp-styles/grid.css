@@ -1,0 +1,79 @@
+/* сеточная система для галереи карточек */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* автоматическое заполнение, карточки минимум по 250px */
+  gap: 20px; /* интервал между карточками */
+  padding: 20px;
+}
+
+/* общий стиль для карточек */
+.grid-item {
+  background-color: #f4f7fb;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column; /* карточка будет иметь вертикальное содержимое */
+}
+
+.grid-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.grid-item--no-image img {
+  display: none; /* скрываем изображение, если карточка без него */
+}
+
+/* стили для карточек разных размеров */
+.grid-item--small {
+  max-width: 250px; /* маленькие карточки */
+}
+
+.grid-item--medium {
+  max-width: 350px; /* средние карточки */
+}
+
+.grid-item--large {
+  max-width: 500px; /* большие карточки */
+}
+
+/* адаптивность для маленьких экранов (до 600px) */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* один столбец */
+  }
+
+  .grid-item {
+    padding: 10px; /* уменьшаем отступы на маленьких экранах */
+  }
+}
+
+/* для экранов от 600px до 1024px (планшеты) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* два столбца */
+  }
+}
+
+/* для экранов от 1024px и больше (десктопы) */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* три столбца */
+  }
+}

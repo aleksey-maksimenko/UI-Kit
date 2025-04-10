@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигационное меню | UI Kit</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+  <nav class="nav">
+    <!-- гамбургер-меню для мобильных устройств -->
+    <div class="nav__hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- ссылки меню -->
+    <ul class="nav__items" id="nav-items">
+      <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+    </ul>
+  </nav>
+  <script>
+    // гамбургер-меню для мобильных
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('nav-items');
+
+    hamburger.addEventListener('click', () => {
+      navItems.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

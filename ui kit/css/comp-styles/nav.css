@@ -1,0 +1,76 @@
+/* общий стиль для навигационного меню */
+.nav {
+  background-color: var(--color-nav-bg);
+  padding: var(--nav-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-nav-border);
+}
+
+/* стили для элементов меню */
+.nav__items {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav__item {
+  margin-right: 20px;
+}
+.nav__item:last-child {
+  margin-right: 0;
+}
+.nav__link {
+  text-decoration: none;
+  color: var(--color-nav-item);
+  font-size: var(--nav-font-size);
+  transition: color 0.3s ease;
+}
+.nav__link:hover {
+  color: var(--color-nav-item-hover); /* при наведении */
+}
+.nav__link:active {
+  color: var(--color-nav-item-active); /* при клике */
+}
+
+/* стиль для гамбургер-меню */
+.nav__hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color-nav-icon);
+}
+.nav__hamburger span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 5px 0;
+  background-color: var(--color-nav-icon);
+}
+/* адаптивность: на мобильных устройствах меню становится вертикальным */
+@media (max-width: 768px) {
+  .nav__items {
+    display: none; /* скрыть элементы на мобильных */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: var(--color-nav-bg);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .nav__items.active {
+    display: flex; /* показать элементы при активации */
+  }
+  .nav__item {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .nav__hamburger {
+    display: block; /* показываем гамбургер-меню */
+  }
+  .nav__link {
+    font-size: var(--nav-font-size-small); /* уменьшенный шрифт для мобильных */
+  }
+}

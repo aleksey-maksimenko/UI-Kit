@@ -1,0 +1,97 @@
+/* общий стиль для всех кнопок */
+.button {
+  display: inline-block; /* кнопки будут располагаться в одной строке */
+  border: none; 
+  border-radius: var(--radius); /* скругляем углы кнопки */
+  font-family: var(--font-family); 
+  font-weight: 500; 
+  cursor: pointer; /* курсор меняется нпри наведении */
+  text-align: 
+  padding: var(--padding-medium); /* внутренние отступы */
+  transition: background-color var(--transition), transform 0.1s ease; /* плавный переход при нажатия */
+  line-height: 1.5; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* тень для кнопки */
+}
+
+/* стили для маленькой кнопки */
+.button--small {
+  padding: var(--padding-small); /* уменьшенные отступы */
+  font-size: var(--font-size-small); /* уменьшенный шрифт */
+}
+
+/* для средней  */
+.button--medium {
+  padding: var(--padding-medium); 
+  font-size: var(--font-size-medium); 
+}
+
+/* для большой кнопки */
+.button--large {
+  padding: var(--padding-large); /* большие отступы */
+  font-size: var(--font-size-large); 
+}
+
+/* стили для основной кнопки primary */
+.button--primary {
+  background-color: var(--color-primary); 
+  color: #fff; 
+  border: 2px solid transparent; /* прозрачная граница */
+}
+
+/* наведение на основную кнопку */
+.button--primary:hover {
+  background-color: var(--color-primary-hover); /* цвет фона при наведении */
+}
+.button--primary:active {
+  background-color: var(--color-primary-active); 
+  transform: scale(0.98); 
+}
+/* стиль для кнопки в фокусе */
+.button--primary:focus {
+  outline: 2px solid var(--color-primary-active); /* подсветка кнопки */
+  outline-offset: 2px; 
+}
+
+/*для второстепенной */
+.button--secondary {
+  background-color: var(--color-secondary); 
+  color: #333; 
+  border: 2px solid transparent; 
+}
+
+.button--secondary:hover {
+  background-color: var(--color-secondary-hover); /* цвет фона при наведении */
+}
+.button--secondary:active {
+  background-color: var(--color-secondary-active); /* цвет фона при нажатии */
+  transform: scale(0.98); /* кнопка немного уменьшается */
+}
+.button--secondary:focus {
+  outline: 2px solid var(--color-secondary-active); /* подсветка кнопки */
+  outline-offset: 2px; /* отступ от контуров */
+}
+
+/* для неактивной кнопки (disabled) */
+.button--disabled {
+  background-color: var(--color-disabled); /* светлый цвет фона */
+  color: var(--color-disabled-text); /* тусклый цвет текста */
+  cursor: not-allowed; /* запрещаем клик по кнопке */
+  pointer-events: none; /* запрещаем все события мыши */
+  border: 2px solid var(--color-disabled-text);
+}
+
+/* адаптивность для мобильных устройств и экранов с шириной менее 600px */
+@media (max-width: 600px) {
+  .button--small {
+    padding: var(--padding-small);
+    font-size: var(--font-size-small);
+  }
+  .button--medium {
+    padding: var(--padding-small); /* уменьшаем отступы */
+    font-size: var(--font-size-small); /* уменьшаем шрифт */
+  }
+  .button--large {
+    padding: var(--padding-medium); /* уменьшаем отступы */
+    font-size: var(--font-size-medium); /* уменьшаем шрифт */
+  }
+}
