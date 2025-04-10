@@ -6,7 +6,7 @@ index.html - демонстрационная страница с компоне
 
 components - каталог с html-описанием отдельных компонентов:
 
-  grid.html - сетка
+\tgrid.html - сетка
   
   flexbox.html - Flexbox для выравнивания по центру
   
